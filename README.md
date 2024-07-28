@@ -1,9 +1,9 @@
-# test
+# README Generator test
 
-  ![License GPL](https://img.shields.io/badge/license-GPLv3-blue.svg)
+  ![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)
 
   ## Description
-  test
+  A quick command line application that helps me build a readme file
 
   ## Table of Contents
   - [Description](#description)
@@ -15,20 +15,20 @@
   - [Questions](#questions)
 
   ## Installation
-  Must install inquirer@8.2.4 + npm i
+  need a dependency Inquirer 8.2.4 and then npm install
 
   ## Usage
-  test
+  node index.js
 
   ## License
   
- This project is licensed under the GPL 3.0 License.
+ This project is licensed under the MIT License.
 
   ## Contributing
-  test
+  none for now
 
   ## Tests
-  
+  npm test
 
   ## Questions
-  Please contact me at jalsj@gmail.com with any questions about this repo. Review more of my work at (https://github.com/ssoto83)
+  Please contact me at ssoto@gmail.com with any questions about this repo. Review more of my work at (https://github.com/ssoto83)

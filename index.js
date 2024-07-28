@@ -20,15 +20,12 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: '',
-        default: 'Must install inquirer@8.2.4 + npm i',
-       
+        message: 'Installation steps:',
     }, 
     {
         type: 'input',
         name: 'usage',
-        message: '',
-        default: 'Run the application by using: node index.js',
+        message: 'To run the application:',
     }, 
     {
         type: 'list',
@@ -44,7 +41,7 @@ const questions = [
     {
         type: 'input',
         name: 'tests',
-        message: 'Run npm test.',
+        message: 'To run test:',
     },
     {
         type: 'input',
