@@ -19,7 +19,7 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'To use must have inquirer@8.2.4 and run by using the following command: node index.js',
+        message: 'Intallation tips: to use must have inquirer@8.2.4 and run by using the following command: node index.js',
        
     }, 
     {
@@ -28,10 +28,10 @@ const questions = [
         message: 'Provide usage information:',
     }, 
     {
-        type: 'input',
+        type: 'list',
         name: 'license',
         message: 'Choose a license?',
-        choices: ['MIT', 'Apache License 2.0', 'GPL 3.0', 'BSD 3-Clause', 'none']
+        choices: ['MIT', 'Apache License 2.0', 'GPL 3.0', 'BSD 3-Clause', 'none'],
     },
     {
         type: 'input',
@@ -73,7 +73,7 @@ function writeToFile(fileName, data) {
 
 // TODO: Create a function to initialize app
 function init() {
-    inquirer.createPromptModule(questions).then((answers) => {
+    inquirer.prompt(questions).then((answers) => {
         const readmeContent = generateMarkdown(answers);
         writeToFile('README.md', readmeContent);
     });
