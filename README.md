@@ -1,34 +1,44 @@
-# README Generator test
+# Readme-Generator
+## Description
 
-  ![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)
+The README Generator is a Command-line application developed with Node.js and the Inquirer package. This will dynamically generate a professional `README.md` file based on user input. It streamlines the process of creating a well structured README file, making easier for developers to document their projects efficiently.
 
-  ## Description
-  A quick command line application that helps me build a readme file
+## Installation
+Inquirer@8.2.4 
+npm install
 
-  ## Table of Contents
-  - [Description](#description)
-  - [Installation](#installation)
-  - [Usage](#usage)
-  - [License](#license)
-  - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [Questions](#questions)
+## Usage
+To use the README Generator, execute the following command in your terminal: 
+node index.js
 
-  ## Installation
-  need a dependency Inquirer 8.2.4 and then npm install
+You will be prompted to provide various details about your project.
 
-  ## Usage
-  node index.js
+## Prompts
+You will be asked for:
 
-  ## License
-  
- This project is licensed under the MIT License.
+* Project Name
+* Description
+* Installation 
+* Usage
+* License Options
+* Contributing Guidelines
+* Tests
+* Your Email
+* Your GitHub username
 
-  ## Contributing
-  none for now
 
-  ## Tests
-  npm test
 
-  ## Questions
-  Please contact me at ssoto@gmail.com with any questions about this repo. Review more of my work at (https://github.com/ssoto83)
+![Alt text](./assets/prompts.png)
+
+## Reporting Issues
+If you encounter any issues with the README Generator, please open an issue or contact ssoto@gmail.com. For more information about my work 
+
+## Contributing
+Contributions are welcome to improve the README Generator. 
+
+## License
+This project is licensed under the MIT license.
+
+## Sample Application Video
+
+https://watch.screencastify.com/v/3POLf4zWYlkSZfA5J2dR
