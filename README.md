@@ -1,12 +1,12 @@
 # test
 
-  undefined
+  ![License GPL](https://img.shields.io/badge/license-GPLv3-blue.svg)
 
   ## Description
   test
 
   ## Table of Contents
-  - [Descrition](#description)
+  - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#license)
@@ -15,24 +15,20 @@
   - [Questions](#questions)
 
   ## Installation
-  test
+  Must install inquirer@8.2.4 + npm i
 
   ## Usage
   test
 
-  function renderLicenseSection(license) {
-  if (license === 'none') {
-    return '';
-  }
-  return `##license
- This project is licensed under the ${license} License.`;
-}
+  ## License
+  
+ This project is licensed under the GPL 3.0 License.
 
   ## Contributing
-  undefined
+  test
 
   ## Tests
-  undefined
+  
 
   ## Questions
-  Please contact test with any questions about this repo. Review more of my work at [undefined](https://github.com/undefined);
+  Please contact me at jalsj@gmail.com with any questions about this repo. Review more of my work at (https://github.com/ssoto83)

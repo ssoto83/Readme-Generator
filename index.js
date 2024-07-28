@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const generateMarkdown = require('./js/generateMarkdown.js');
+// const { error } = require('console');
 
 
 // TODO: Create an array of questions for user input
@@ -19,13 +20,15 @@ const questions = [
     {
         type: 'input',
         name: 'installation',
-        message: 'Intallation tips: to use must have inquirer@8.2.4 and run by using the following command: node index.js',
+        message: '',
+        default: 'Must install inquirer@8.2.4 + npm i',
        
     }, 
     {
         type: 'input',
         name: 'usage',
-        message: 'Provide usage information:',
+        message: '',
+        default: 'Run the application by using: node index.js',
     }, 
     {
         type: 'list',
@@ -36,27 +39,22 @@ const questions = [
     {
         type: 'input',
         name: 'contributing',
-        message: 'What are your contribution guidelines?',
+        message: 'What are your contributing guidelines?',
     },
     {
         type: 'input',
-        name: 'test',
-        message: 'To test use (npm).',
-    },
-    {
-        type: 'input',
-        name: 'title',
-        message: 'What is your Project name?',
-    },
-    {
-        type: 'input',
-        name: 'username',
-        message: 'What is your GitHub username?',
+        name: 'tests',
+        message: 'Run npm test.',
     },
     {
         type: 'input',
         name: 'email',
-        message: 'Please enter your email address:',
+        message: 'Enter your email address:',
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Enter your GitHub username?',
     },
 ];
 
@@ -74,10 +72,12 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt(questions).then((answers) => {
+        console.log('Capture data:', answers);
         const readmeContent = generateMarkdown(answers);
         writeToFile('README.md', readmeContent);
-    });
+        }).catch((error) => {
+            console.error('Error starting the application', error);
+});
 }
-
 // Function call to initialize app
 init();

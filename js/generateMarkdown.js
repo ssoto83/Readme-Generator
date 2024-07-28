@@ -1,18 +1,17 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  switch (license) {
-    case 'MIT':
-      return 
-    case 'Apache License 2.0':
-      return 
-    case 'GPL':
-      return 
-    case 'BSD':
-      return     
-
-    default:
-      break;
+      switch (license) {
+      case 'MIT':
+        return '![License: MIT](https://img.shields.io/badge/license-MIT-yellow.svg)';
+      case 'Apache License 2.0':
+        return '![License Apache](https://img.shields.io/badge/license-Apache%202.0-blue.svg)';
+      case 'GPL 3.0':
+        return '![License GPL](https://img.shields.io/badge/license-GPLv3-blue.svg)';
+      case 'BSD-3-Clause':
+        return  '![License: BSD](https://img.shields.io/badge/license-BSD%203--Clause-oranage.svg)';    
+      default:
+        return '';
   }
 }
 
@@ -21,14 +20,13 @@ function renderLicenseBadge(license) {
 function renderLicenseLink(license) {
   switch (license) {
     case 'MIT':
-      return 'https://opensource.org/licenses/MIT';
+      return 'https://opensource.org/license/MIT';
     case 'Apache License 2.0':
-      return 'https://opensource.org/licenses/Apache-2.0';
+      return 'https://opensource.org/license/apache-2-0';
     case 'GPL 3.0':
-      return 'https://opensource.org/licenses/GPL-3.0';
+      return 'https://opensource.org/license/gpl-3-0';
     case 'BSD-3-Clause':
-      return  'https://opensource.org/licenses/BSD-3-Clause';  
-
+      return  'https://opensource.org/license/bsd-3-clause'; 
     default:
       return '';
   }
@@ -40,7 +38,7 @@ function renderLicenseSection(license) {
   if (license === 'none') {
     return '';
   }
-  return `##license
+  return `
  This project is licensed under the ${license} License.`;
 }
 
@@ -54,7 +52,7 @@ function generateMarkdown(data) {
   ${data.description}
 
   ## Table of Contents
-  - [Descrition](#description)
+  - [Description](#description)
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#license)
@@ -68,16 +66,17 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
 
-  ${renderLicenseSection}
+  ## License
+  ${renderLicenseSection(data.license)}
 
   ## Contributing
-  ${data.Contributing}
+  ${data.contributing}
 
   ## Tests
   ${data.tests}
 
   ## Questions
-  Please contact ${data.email} with any questions about this repo. Review more of my work at [${data.github}](https://github.com/${data.github});
+  Please contact me at ${data.email} with any questions about this repo. Review more of my work at (https://github.com/${data.github})
 `;
 }
 
