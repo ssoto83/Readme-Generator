@@ -31,7 +31,8 @@ You will be asked for:
 ![Alt text](./assets/prompts.png)
 
 ## Reporting Issues
-If you encounter any issues with the README Generator, please open an issue or contact ssoto@gmail.com. For more information about my work 
+If you encounter any issues with the README Generator, please open an issue or contact ssoto@gmail.com. 
+GitHub repo link https://github.com/ssoto83/Readme-Generator.git
 
 ## Contributing
 Contributions are welcome to improve the README Generator. 
